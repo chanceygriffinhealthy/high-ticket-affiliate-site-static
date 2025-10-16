@@ -1,14 +1,57 @@
 [
   {
-    "id": "your-offer",
-    "brand": "Digest Sync 24",
-    "category": "Other",
-    "tagline": "High-ticket offer",
-    "commission": "Enter actual payout details",
-    "cookie": "Per program",
-    "price_hint": "—",
-    "pros": ["Strong payouts", "Great conversion"],
-    "cons": ["Add realistic cons"],
-    "url": "https://getmydigestsync24.com/text.php#aff=healthychance"
+    "id": "keyslim-drops",
+    "brand": "KeySlim Drops",
+    "category": "Health & Wellness",
+    "tagline": "Fat-burning drops with multi-ingredient blend",
+    "commission": "65% front-end, 60% upsells (via Digistore24)",
+    "cookie": "Vendor-managed (see affiliate page)",
+    "price_hint": "$69–$79 single bottle; bundle deals available",
+    "pros": [
+      "High commission payouts",
+      "Proven VSL funnel converts well",
+      "Affiliate resources & email swipes provided"
+    ],
+    "cons": [
+      "Strict ad & compliance rules",
+      "Weight-loss niche = higher refund rate"
+    ],
+    "url": "https://getkeyslimdrops.cc/vsl1/#aff=healthychance"
+  },
+  {
+    "id": "tube-mastery",
+    "brand": "Tube Mastery & Monetization",
+    "category": "Business / YouTube",
+    "tagline": "Build faceless YouTube channels that earn income 24/7",
+    "commission": "50% per sale (Digistore24)",
+    "cookie": "Per DS24 listing",
+    "price_hint": "Course; AOV ≈ $213.80",
+    "pros": [
+      "Evergreen niche",
+      "Huge content angles",
+      "Strong brand demand"
+    ],
+    "cons": [
+      "Course niche is competitive"
+    ],
+    "url": "https://mattpar.com/tube-mastery-ds#aff=healthychance"
+  },
+  {
+    "id": "efarming-challenge",
+    "brand": "eFarming Challenge",
+    "category": "Business / Online Income",
+    "tagline": "Simple 3-step system to create online income fast",
+    "commission": "40% per sale (Digistore24)",
+    "cookie": "Per DS24 listing",
+    "price_hint": "Program; AOV ≈ $274.75",
+    "pros": [
+      "Great social hook",
+      "Clear promise",
+      "Good AOV potential"
+    ],
+    "cons": [
+      "Results vary; manage expectations"
+    ],
+    "url": "https://www.digistore24.com/redir/449012/healthychance/"
   }
 ]
