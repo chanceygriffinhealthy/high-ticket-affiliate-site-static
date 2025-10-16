@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>High-Ticket Picks</title>
+  <meta name="description" content="Clean landing page for high-ticket affiliate offers." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>.chip{font-size:11px}</style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <strong>High-Ticket Picks</strong>
+      <a href="#subscribe" class="text-sm underline underline-offset-4">Get the free buyer’s guide →</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <section class="mb-8">
+      <h1 class="text-3xl font-extrabold">Compare & Promote <span class="bg-yellow-200 px-2 rounded">High-Ticket</span> Offers</h1>
+      <p class="mt-3 text-gray-600">Simple, fast landing page. Your CTA buttons go to your affiliate links.</p>
+      <div class="mt-4 flex gap-2">
+        <input id="q" placeholder="Search…" class="px-3 py-2 rounded-xl border w-56">
+        <select id="cat" class="px-3 py-2 rounded-xl border"><option value="All">All</option></select>
+        <select id="sort" class="px-3 py-2 rounded-xl border">
+          <option value="payout">Sort: Best payout</option>
+          <option value="brand">Sort: Brand A→Z</option>
+          <option value="category">Sort: Category</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="cards" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></section>
+
+    <section id="subscribe" class="mt-10 rounded-2xl border bg-white shadow-sm p-5 grid md:grid-cols-3 gap-4 items-center">
+      <div class="md:col-span-2">
+        <h2 class="text-xl font-semibold">Free Buyer’s Guide</h2>
+        <p class="text-sm text-gray-600 mt-1">Enter your email to get our short guide + deal alerts.</p>
+      </div>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="flex gap-2">
+        <input name="email" type="email" required placeholder="you@example.com" class="flex-1 px-3 py-2 rounded-xl border">
+        <button class="px-4 py-2 rounded-xl bg-black text-white">Send</button>
+      </form>
+    </section>
+
+    <p class="text-[11px] text-gray-500 mt-2">
+      <strong>Affiliate disclosure:</strong> If you click and buy, we may earn a commission at no extra cost to you.
+    </p>
+  </main>
+
+  <script>
+    const elCards = document.getElementById('cards');
+    const elQ = document.getElementById('q');
+    const elCat = document.getElementById('cat');
+    const elSort = document.getElementById('sort');
+
+    let offers = [];
+    let categories = new Set(['All']);
+
+    async function load() {
+      try {
+        const res = await fetch('./offers.json', {cache: 'no-store'});
+        offers = await res.json();
+      } catch {
+        offers = [{
+          id:'your-offer',
+          brand:'Your Offer',
+          category:'Other',
+          tagline:'Special promo you recommend',
+          commission:'High-ticket (enter exact terms)',
+          cookie:'Per program',
+          price_hint:'—',
+          pros:['Strong payouts','Great conversion'],
+          cons:['Add realistic cons'],
+          url:'https://getmydigestsync24.com/text.php#aff=healthychance'
+        }];
+      }
+      offers.forEach(o=>categories.add(o.category||'Other'));
+      for (const c of categories) {
+        const opt=document.createElement('option'); opt.value=c; opt.textContent=c; elCat.appendChild(opt);
+      }
+      render();
+    }
+
+    function filtered() {
+      const q=(elQ.value||'').toLowerCase().trim();
+      const cat=elCat.value||'All';
+      let list=offers.filter(o=>cat==='All'||o.category===cat);
+      if (q) list=list.filter(o=>
+        o.brand.toLowerCase().includes(q) ||
+        (o.tagline||'').toLowerCase().includes(q) ||
+        (o.pros||[]).some(p=>p.toLowerCase().includes(q)) ||
+        (o.cons||[]).some(p=>p.toLowerCase().includes(q)));
+      const sort=elSort.value;
+      if (sort==='brand') list.sort((a,b)=>a.brand.localeCompare(b.brand));
+      else if (sort==='category') list.sort((a,b)=> (a.category||'').localeCompare(b.category||''));
+      else list.sort((a,b)=>(b.commission||'').length-(a.commission||'').length);
+      return list;
+    }
+
+    function render() {
+      const list = filtered();
+      elCards.innerHTML='';
+      list.forEach(o=>{
+        const card=document.createElement('div');
+        card.className='rounded-2xl border bg-white shadow-sm p-4 flex flex-col';
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h3 class="text-xl font-semibold">${o.brand}</h3>
+              <p class="text-sm text-gray-600">${o.tagline||''}</p>
+            </div>
+            <span class="chip bg-gray-100 px-2 py-1 rounded-full">${o.category||'Other'}</span>
+          </div>
+          <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <div class="rounded-xl bg-gray-50 p-3"><dt class="text-gray-500">Commission</dt><dd class="font-medium">${o.commission||''}</dd></div>
+            <div class="rounded-xl bg-gray-50 p-3"><dt class="text-gray-500">Cookie</dt><dd class="font-medium">${o.cookie||''}</dd></div>
+            <div class="rounded-xl bg-gray-50 p-3"><dt class="text-gray-500">Price</dt><dd class="font-medium">${o.price_hint||''}</dd></div>
+            <div class="rounded-xl bg-gray-50 p-3"><dt class="text-gray-500">Fit</dt><dd class="font-medium">High-intent buyers</dd></div>
+          </dl>
+          <div class="mt-3 text-sm">
+            <p class="text-gray-500 mb-1">Pros</p>
+            <ul class="list-disc pl-5 space-y-1">${(o.pros||[]).map(p=>`<li>${p}</li>`).join('')}</ul>
+          </div>
+          <div class="mt-1 text-sm">
+            <p class="text-gray-500 mb-1">Cons</p>
+            <ul class="list-disc pl-5 space-y-1">${(o.cons||[]).map(p=>`<li>${p}</li>`).join('')}</ul>
+          </div>
+          <div class="mt-auto pt-4">
+            <a href="${o.url}" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-black text-white w-full">Get Deal</a>
+          </div>`;
+        elCards.appendChild(card);
+      });
+    }
+
+    elQ.addEventListener('input', render);
+    elCat.addEventListener('change', render);
+    elSort.addEventListener('change', render);
+    load();
+  </script>
+</body>
+</html>
