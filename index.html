@@ -3,171 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>High-Ticket Picks — Curated Offers for Digital Entrepreneurs</title>
-  <meta name="description" content="Curated high-ticket offers with premium presentation and clear benefits. Built for creators & founders who value ROI." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 24 24'%3E%3Cpath fill='%23F5C542' d='M12 2L2 7l10 5l10-5z'/%3E%3Cpath fill='%23D6B14D' d='M2 17l10 5l10-5'/%3E%3Cpath fill='%23fff' d='M2 7v10l10 5V12z' opacity='.08'/%3E%3C/svg%3E">
+  <title>High-Ticket Picks — Expert Reviews & Top Offers</title>
+  <meta name="description" content="Expertly curated high-ticket affiliate offers. Honest summaries, clear pros/cons, and quick comparison so you can choose fast." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --bg:#0A0A0B;        /* deep charcoal */
-      --card:#111214;      /* card bg */
-      --muted:#A5ABB6;     /* soft gray */
-      --accent:#F5C542;    /* gold */
-      --accent2:#D6B14D;   /* deeper gold */
-      --stroke:#1B1C20;
+      --ink:#0b1220;
+      --muted:#5b6472;
+      --brand:#0ea5e9;      /* cobalt */
+      --brand-dark:#0b82b7;
+      --ring:#dbe7ff;
+      --card:#ffffff;
+      --bg:#f7f8fb;
     }
-    .chip{font-size:11px}
-    .btn{transition:.08s transform ease, box-shadow .15s ease}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .serif{font-family:Merriweather,Georgia,serif}
+    .badge{font-size:11px}
+    .btn{transition:transform .08s ease, box-shadow .2s ease}
     .btn:active{transform:translateY(1px)}
-    .shadow-gold{box-shadow:0 12px 30px -12px rgba(245,197,66,.35)}
-    .glass{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));backdrop-filter: blur(8px)}
-    .grid-auto{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-    .check::before{content:""; display:inline-block; width:.9rem; height:.9rem; margin-right:.5rem; border-radius:9999px; background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .shadow-brand{box-shadow:0 10px 28px -10px rgba(14,165,233,.35)}
+    .container{max-width:1100px}
+    .card{border:1px solid #eef1f6}
+    .stickybar{position:sticky;bottom:0;background:#0b1220;color:#fff}
+    .star{color:#f59e0b}
+    .pro:before{content:"✓ ";color:#16a34a}
+    .con:before{content:"• ";color:#ef4444}
+    .table-wrap{overflow-x:auto}
   </style>
 </head>
-<body class="bg-[var(--bg)] text-white selection:bg-[var(--accent)]/30">
+<body class="bg-[var(--bg)] text-[var(--ink)]">
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-40 border-b border-[var(--stroke)]/80 bg-black/50 glass">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur border-b">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="h-6 w-6 rounded bg-gradient-to-br from-[var(--accent)] to-[var(--accent2)]"></div>
-        <span class="font-semibold tracking-tight">High-Ticket Picks</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="font-extrabold">High-Ticket Picks</span>
       </div>
-      <a href="#offers" class="btn text-sm px-4 py-2 rounded-lg border border-[var(--stroke)] hover:bg-white/5">View offers</a>
+      <nav class="hidden sm:flex items-center gap-5 text-sm">
+        <a href="#top-pick" class="hover:underline">Top Pick</a>
+        <a href="#comparison" class="hover:underline">Compare</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+        <a href="#subscribe" class="text-[var(--brand)] font-medium hover:underline">Free Buyer’s Guide →</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="max-w-7xl mx-auto px-4 pt-10 pb-6">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
+  <!-- Hero -->
+  <section class="container mx-auto px-4 pt-10 pb-6">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-[1.05] tracking-tight">
-          Curated <span class="bg-gradient-to-r from-[var(--accent)] to-[var(--accent2)] bg-clip-text text-transparent">High-Ticket</span> Offers for Digital Entrepreneurs
+        <h1 class="serif text-4xl md:text-5xl font-bold leading-tight">
+          Expert Reviews of <span class="text-[var(--brand)]">High-Ticket</span> Offers
         </h1>
-        <p class="mt-4 text-lg text-[var(--muted)]">Three vetted products. Premium presentation. One link to share. Built to convert without hype.</p>
-        <ul class="mt-5 grid gap-2 text-sm text-[var(--muted)]">
-          <li class="check">Clear value props & clean design (trust first)</li>
-          <li class="check">Commission-focused copy with strong CTAs</li>
-          <li class="check">Fast, static page (no breaks, no delays)</li>
-        </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="#offers" class="btn inline-flex items-center px-5 py-3 rounded-xl bg-[var(--accent)] text-black hover:brightness-95 shadow-gold font-semibold">Browse Offers</a>
-          <a href="#why" class="btn inline-flex items-center px-5 py-3 rounded-xl border border-[var(--stroke)] hover:bg-white/5">Why these picks</a>
+        <p class="mt-4 text-lg text-[var(--muted)]">No fluff. We summarize each offer in 30 seconds: who it’s for, what you earn, and the trade-offs.</p>
+        <div class="mt-5 flex gap-3">
+          <a href="#top-pick" class="btn inline-flex items-center px-5 py-3 rounded-xl bg-[var(--brand)] text-white shadow-brand hover:bg-[var(--brand-dark)]">See Our Top Pick</a>
+          <a href="#comparison" class="btn inline-flex items-center px-5 py-3 rounded-xl border">Compare All</a>
         </div>
-        <p class="mt-4 text-xs text-[var(--muted)]">No testimonials or “before/after” claims. FTC-friendly copy.</p>
+        <ul class="mt-5 grid sm:grid-cols-3 gap-3 text-sm">
+          <li class="bg-white rounded-xl p-3 card">Real pros/cons</li>
+          <li class="bg-white rounded-xl p-3 card">Clear commission info</li>
+          <li class="bg-white rounded-xl p-3 card">Mobile-first speed</li>
+        </ul>
       </div>
       <div class="hidden md:block">
-        <div class="rounded-2xl border border-[var(--stroke)] bg-[var(--card)] p-6">
-          <p class="text-sm text-[var(--muted)]">Quick filters</p>
-          <div class="mt-3 flex gap-3">
-            <input id="q" placeholder="Search brand or feature…" class="px-4 py-3 rounded-xl bg-black/40 border border-[var(--stroke)] outline-none w-full" />
-            <select id="cat" class="px-4 py-3 rounded-xl bg-black/40 border border-[var(--stroke)] min-w-[140px]">
-              <option value="All">All</option>
-            </select>
-          </div>
-          <div class="mt-3">
-            <select id="sort" class="px-4 py-3 rounded-xl bg-black/40 border border-[var(--stroke)]">
-              <option value="payout">Sort: Best payout</option>
-              <option value="brand">Sort: Brand A→Z</option>
-              <option value="category">Sort: Category</option>
-            </select>
-          </div>
-          <p class="mt-3 text-xs text-[var(--muted)]">Tip: Start with 1–2 traffic channels. Scale what converts.</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1553729784-e91953dec042?q=80&w=1200&auto=format&fit=crop" alt="" class="rounded-2xl border card">
       </div>
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
-  <section class="max-w-7xl mx-auto px-4 pb-4">
-    <div class="rounded-xl border border-[var(--stroke)] bg-[var(--card)] p-4 grid sm:grid-cols-3 gap-3 text-sm text-[var(--muted)]">
-      <div class="flex items-center gap-2"><img src="https://api.iconify.design/mdi/shield-check.svg?color=%23F5C542" class="h-5 w-5" alt=""> Transparent affiliate disclosure</div>
-      <div class="flex items-center gap-2"><img src="https://api.iconify.design/mdi/lightning-bolt.svg?color=%23F5C542" class="h-5 w-5" alt=""> Fast static hosting (Vercel)</div>
-      <div class="flex items-center gap-2"><img src="https://api.iconify.design/mdi/magnify.svg?color=%23F5C542" class="h-5 w-5" alt=""> No hype—clear, factual copy</div>
+  <!-- Filters -->
+  <section class="container mx-auto px-4 pb-2">
+    <div class="bg-white rounded-2xl p-4 card flex flex-col sm:flex-row gap-3 items-center">
+      <input id="q" placeholder="Search brand, features, or niche…" class="w-full sm:flex-1 px-4 py-3 rounded-xl border focus:outline-none focus:ring-4 focus:ring-[var(--ring)]">
+      <select id="cat" class="px-4 py-3 rounded-xl border">
+        <option value="All">All categories</option>
+      </select>
+      <select id="sort" class="px-4 py-3 rounded-xl border">
+        <option value="payout">Sort: Best payout</option>
+        <option value="brand">Brand A→Z</option>
+        <option value="category">Category</option>
+      </select>
     </div>
   </section>
 
-  <!-- OFFERS -->
-  <section id="offers" class="max-w-7xl mx-auto px-4 pb-2">
-    <div id="cards" class="grid grid-auto gap-5"></div>
+  <!-- Top Pick (auto-chosen) -->
+  <section id="top-pick" class="container mx-auto px-4 py-6">
+    <div id="topPickSlot"></div>
   </section>
 
-  <!-- WHY -->
-  <section id="why" class="max-w-7xl mx-auto px-4 py-10">
-    <div class="rounded-2xl border border-[var(--stroke)] bg-[var(--card)] p-6">
-      <h2 class="text-xl font-semibold">Why these picks</h2>
-      <div class="mt-3 grid md:grid-cols-3 gap-4 text-sm text-[var(--muted)]">
-        <div class="rounded-xl bg-black/30 p-4 border border-[var(--stroke)]">High commissions or strong % on proven funnels.</div>
-        <div class="rounded-xl bg-black/30 p-4 border border-[var(--stroke)]">Marketing assets available (VSLs, banners, email swipes).</div>
-        <div class="rounded-xl bg-black/30 p-4 border border-[var(--stroke)]">Compliance-first: we avoid hype, stick to allowed claims.</div>
+  <!-- All Cards -->
+  <section class="container mx-auto px-4 pb-4">
+    <h2 class="text-xl font-semibold mb-3">All Editor-Vetted Offers</h2>
+    <div id="cards" class="grid md:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section id="comparison" class="container mx-auto px-4 pb-10">
+    <div class="bg-white rounded-2xl p-5 card">
+      <h2 class="text-xl font-semibold">Quick Comparison</h2>
+      <div class="table-wrap mt-3">
+        <table class="min-w-full text-sm">
+          <thead>
+            <tr class="text-[var(--muted)]">
+              <th class="py-2 pr-4 text-left">Brand</th>
+              <th class="py-2 pr-4 text-left">Commission</th>
+              <th class="py-2 pr-4 text-left">Cookie</th>
+              <th class="py-2 pr-4 text-left">Category</th>
+              <th class="py-2 pr-4 text-left">Price hint</th>
+              <th class="py-2 pr-4 text-left">Link</th>
+            </tr>
+          </thead>
+          <tbody id="compareRows"></tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="max-w-7xl mx-auto px-4 pb-12">
-    <div class="rounded-2xl border border-[var(--stroke)] bg-[var(--card)] p-6">
+  <section id="faq" class="container mx-auto px-4 pb-12">
+    <div class="bg-white rounded-2xl p-6 card">
       <h2 class="text-xl font-semibold">FAQ</h2>
-      <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-[var(--muted)]">
+      <div class="grid sm:grid-cols-2 gap-5 mt-4 text-sm text-[var(--muted)]">
         <div>
-          <p class="text-white font-medium">Are these affiliate links?</p>
-          <p>Yes. If you purchase through a link here, we may earn a commission at no extra cost to you.</p>
+          <p class="text-[var(--ink)] font-medium">Are these affiliate links?</p>
+          <p>Yes—if you purchase via a link here, we may earn a commission at no extra cost to you.</p>
         </div>
         <div>
-          <p class="text-white font-medium">How do you choose offers?</p>
-          <p>We prioritize payout, funnel quality, brand reputation, and clear terms. We avoid “too good to be true” claims.</p>
+          <p class="text-[var(--ink)] font-medium">How do you pick a Top Pick?</p>
+          <p>We weigh payout, funnel quality, clarity of the offer, and fit for digital entrepreneurs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SUBSCRIBE -->
-  <section id="subscribe" class="max-w-7xl mx-auto px-4 pb-16">
-    <div class="rounded-2xl border border-[var(--stroke)] bg-[var(--card)] p-6 grid md:grid-cols-3 gap-4 items-center">
+  <!-- Subscribe -->
+  <section id="subscribe" class="container mx-auto px-4 pb-16">
+    <div class="bg-white rounded-2xl p-6 card grid md:grid-cols-3 gap-4 items-center">
       <div class="md:col-span-2">
         <h3 class="text-lg font-semibold">Free Buyer’s Guide</h3>
-        <p class="text-sm text-[var(--muted)] mt-1">Get our quick guide + updates when we add new high-ticket deals.</p>
+        <p class="text-sm text-[var(--muted)] mt-1">Get our quick guide + alerts when we add or replace high-ticket deals.</p>
       </div>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="flex gap-2">
-        <input name="email" type="email" required placeholder="you@example.com" class="flex-1 px-3 py-3 rounded-xl bg-black/40 border border-[var(--stroke)]"/>
-        <button class="px-5 py-3 rounded-xl bg-[var(--accent)] text-black hover:brightness-95 shadow-gold font-semibold">Send</button>
+        <input name="email" type="email" required placeholder="you@example.com" class="flex-1 px-3 py-3 rounded-xl border focus:outline-none focus:ring-4 focus:ring-[var(--ring)]">
+        <button class="px-5 py-3 rounded-xl bg-[var(--brand)] text-white hover:bg-[var(--brand-dark)] shadow-brand font-semibold">Send</button>
       </form>
     </div>
     <p class="text-[11px] text-[var(--muted)] mt-2">Unsubscribe anytime.</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-[var(--stroke)]">
-    <div class="max-w-7xl mx-auto px-4 py-8 text-xs text-[var(--muted)]">
-      <p><strong class="text-white">Affiliate disclosure:</strong> Some links on this page are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you.</p>
+  <!-- Sticky CTA -->
+  <div class="stickybar z-30">
+    <div class="container mx-auto px-4 py-3 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <p class="text-sm">Ready to promote? Start with our <span class="font-semibold">Top Pick</span>—highest clarity, strong payouts.</p>
+      <a href="#top-pick" class="btn inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white text-[var(--ink)]">Jump to Top Pick</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div class="container mx-auto px-4 py-8 text-xs text-[var(--muted)]">
+      <p><strong class="text-[var(--ink)]">Affiliate disclosure:</strong> Some links on this page are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you.</p>
       <div class="mt-2 flex gap-4">
-        <a href="#" class="underline hover:text-white/90">Privacy</a>
-        <a href="#" class="underline hover:text-white/90">Terms</a>
-        <a href="#" class="underline hover:text-white/90">Contact</a>
+        <a href="#" class="underline">Privacy</a>
+        <a href="#" class="underline">Terms</a>
+        <a href="#" class="underline">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- LOGIC -->
+  <!-- Logic -->
   <script>
-    const elCards = document.getElementById('cards');
     const elQ = document.getElementById('q');
     const elCat = document.getElementById('cat');
     const elSort = document.getElementById('sort');
+    const elCards = document.getElementById('cards');
+    const elCompare = document.getElementById('compareRows');
+    const elTop = document.getElementById('topPickSlot');
 
     let offers = [];
     let categories = new Set(['All']);
 
-    // Icons themed for digital entrepreneur vibe
-    const brandIcons = {
-      "KeySlim Drops": "https://api.iconify.design/mdi/leaf.svg?color=%23F5C542",
-      "Tube Mastery & Monetization": "https://api.iconify.design/mdi/youtube.svg?color=%23F5C542",
-      "eFarming Challenge": "https://api.iconify.design/mdi/sprout.svg?color=%23F5C542"
+    // Simple brand images (swap if you like)
+    const brandImgs = {
+      "KeySlim Drops": "https://images.unsplash.com/photo-1541427468627-a89a96e5ca37?q=80&w=1200&auto=format&fit=crop",
+      "Tube Mastery & Monetization": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
+      "eFarming Challenge": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
     };
 
-    // Label mapping to keep “entrepreneur” theme consistent
-    const categoryMap = {
+    // Category relabel to fit “digital entrepreneur” theme
+    const catMap = {
       "Health & Wellness": "Performance",
       "Business / YouTube": "Audience Growth",
       "Business / Online Income": "Monetization"
@@ -175,106 +202,148 @@
 
     async function load() {
       try {
-        const res = await fetch('./offers.json', {cache: 'no-store'});
+        const res = await fetch('./offers.json', {cache:'no-store'});
         offers = await res.json();
-      } catch {
-        offers = [{
-          id:'placeholder',
-          brand:'Your Offer',
-          category:'Monetization',
-          tagline:'Add offers in offers.json',
-          commission:'—', cookie:'—', price_hint:'—',
-          pros:['Example line'], cons:['Example line'],
-          url:'#'
-        }];
+      } catch(e) {
+        offers = [];
       }
-      offers.forEach(o=>categories.add(categoryMap[o.category] || o.category || 'Other'));
-      if (elCat) {
-        for (const c of categories) { const opt=document.createElement('option'); opt.value=c; opt.textContent=c; elCat.appendChild(opt); }
+      offers = offers.map(o => ({...o, _cat: catMap[o.category] || o.category}));
+      offers.forEach(o => categories.add(o._cat || 'Other'));
+      for (const c of categories) {
+        const opt = document.createElement('option'); opt.value=c; opt.textContent=c; elCat.appendChild(opt);
       }
       render();
     }
 
     function filtered() {
-      const q=(elQ?.value||'').toLowerCase().trim();
-      const cat=elCat?.value||'All';
-      let list=offers.map(o=>({...o, _cat: categoryMap[o.category] || o.category || 'Other'}));
-      if (cat!=='All') list=list.filter(o=>o._cat===cat);
-      if (q) list=list.filter(o=>
-        o.brand.toLowerCase().includes(q) ||
-        (o.tagline||'').toLowerCase().includes(q) ||
-        (o.pros||[]).some(p=>p.toLowerCase().includes(q)) ||
-        (o.cons||[]).some(p=>p.toLowerCase().includes(q)));
-      const sort=elSort?.value||'payout';
-      if (sort==='brand') list.sort((a,b)=>a.brand.localeCompare(b.brand));
-      else if (sort==='category') list.sort((a,b)=> (a._cat||'').localeCompare(b._cat||''));
-      else list.sort((a,b)=>(b.commission||'').length-(a.commission||'').length);
+      const q = (elQ.value || '').toLowerCase().trim();
+      const cat = elCat.value || 'All';
+      const sort = elSort.value || 'payout';
+
+      let list = offers.filter(o => cat === 'All' ? true : (o._cat === cat));
+      if (q) {
+        list = list.filter(o =>
+          (o.brand||'').toLowerCase().includes(q) ||
+          (o.tagline||'').toLowerCase().includes(q) ||
+          (o.pros||[]).some(p => p.toLowerCase().includes(q)) ||
+          (o.cons||[]).some(p => p.toLowerCase().includes(q))
+        );
+      }
+      if (sort === 'brand') list.sort((a,b)=>a.brand.localeCompare(b.brand));
+      else if (sort === 'category') list.sort((a,b)=>(a._cat||'').localeCompare(b._cat||''));
+      else list.sort((a,b)=>(b.commission||'').length - (a.commission||'').length); // proxy for payout strength
       return list;
     }
 
-    function cardHTML(o, i){
-      const icon = brandIcons[o.brand] || "https://api.iconify.design/mdi/star-circle.svg?color=%23F5C542";
-      const featured = i===0 ? `<span class="ml-2 px-2 py-0.5 text-[10px] rounded bg-[var(--accent)]/15 border border-[var(--stroke)] text-[var(--accent)]">Featured</span>` : "";
+    function starsHTML(n=5){ return '<span class="star">★</span>'.repeat(n) + '<span class="text-gray-300">★</span>'.repeat(5-n) }
+
+    function topPickHTML(o){
+      const img = brandImgs[o.brand] || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
       return `
-        <article class="rounded-2xl border border-[var(--stroke)] bg-[var(--card)] p-5 flex flex-col">
-          <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-3">
-              <img src="${icon}" alt="" class="h-7 w-7">
-              <div>
-                <h3 class="text-xl font-semibold leading-tight">${o.brand} ${featured}</h3>
-                <p class="text-sm text-[var(--muted)]">${o.tagline||''}</p>
+        <div class="bg-white rounded-2xl border card overflow-hidden">
+          <div class="grid md:grid-cols-2">
+            <img src="${img}" alt="" class="w-full h-60 md:h-full object-cover">
+            <div class="p-6">
+              <div class="flex items-center gap-2">
+                <span class="badge inline-flex items-center px-2 py-1 rounded-full bg-[var(--brand)]/10 text-[var(--brand)] border border-[var(--brand)]/20">Editor’s Choice</span>
+                <span class="badge inline-flex items-center px-2 py-1 rounded-full bg-black/5">${o._cat||o.category}</span>
+              </div>
+              <h2 class="text-2xl font-extrabold mt-2">${o.brand}</h2>
+              <p class="text-[var(--muted)] mt-1">${o.tagline||''}</p>
+              <div class="mt-3 flex items-center gap-2 text-sm">
+                <span>${starsHTML(5)}</span>
+                <span class="text-[var(--muted)]">Editor rating</span>
+              </div>
+              <dl class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-xl bg-[#f8fafc] p-3">
+                  <dt class="text-[var(--muted)]">Commission</dt>
+                  <dd class="font-medium">${o.commission||''}</dd>
+                </div>
+                <div class="rounded-xl bg-[#f8fafc] p-3">
+                  <dt class="text-[var(--muted)]">Cookie</dt>
+                  <dd class="font-medium">${o.cookie||''}</dd>
+                </div>
+              </dl>
+              <ul class="mt-3 grid gap-1 text-sm">
+                ${(o.pros||[]).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('')}
+              </ul>
+              <div class="mt-5 flex gap-2">
+                <a href="${o.url}" target="_blank" rel="nofollow noopener" class="btn px-5 py-3 rounded-xl bg-[var(--brand)] text-white hover:bg-[var(--brand-dark)] shadow-brand">Get Deal</a>
+                <a href="#comparison" class="btn px-5 py-3 rounded-xl border">Compare All</a>
               </div>
             </div>
-            <span class="chip px-2 py-1 rounded-full bg-black/40 border border-[var(--stroke)]">${o._cat||o.category||'Other'}</span>
           </div>
+        </div>`;
+    }
 
-          <dl class="mt-4 grid grid-cols-2 gap-2 text-sm">
-            <div class="rounded-xl bg-black/30 p-3 border border-[var(--stroke)]">
+    function cardHTML(o){
+      const img = brandImgs[o.brand] || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop';
+      return `
+        <article class="bg-white rounded-2xl p-4 card flex flex-col">
+          <img src="${img}" alt="" class="rounded-xl border mb-3 h-36 object-cover">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-extrabold leading-tight">${o.brand}</h3>
+              <p class="text-sm text-[var(--muted)]">${o.tagline||''}</p>
+            </div>
+            <span class="badge px-2 py-1 rounded-full bg-black/5">${o._cat||o.category}</span>
+          </div>
+          <dl class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <div class="rounded-lg bg-[#f8fafc] p-3">
               <dt class="text-[var(--muted)]">Commission</dt>
               <dd class="font-medium">${o.commission||''}</dd>
             </div>
-            <div class="rounded-xl bg-black/30 p-3 border border-[var(--stroke)]">
+            <div class="rounded-lg bg-[#f8fafc] p-3">
               <dt class="text-[var(--muted)]">Cookie</dt>
               <dd class="font-medium">${o.cookie||''}</dd>
             </div>
-            <div class="rounded-xl bg-black/30 p-3 border border-[var(--stroke)]">
-              <dt class="text-[var(--muted)]">Price</dt>
-              <dd class="font-medium">${o.price_hint||''}</dd>
-            </div>
-            <div class="rounded-xl bg-black/30 p-3 border border-[var(--stroke)]">
-              <dt class="text-[var(--muted)]">Fit</dt>
-              <dd class="font-medium">High-intent buyers</dd>
-            </div>
           </dl>
-
-          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
-            <div>
-              <p class="text-[var(--muted)] mb-1">Pros</p>
-              <ul class="list-disc pl-5 space-y-1">${(o.pros||[]).map(p=>`<li>${p}</li>`).join('')}</ul>
-            </div>
-            <div>
-              <p class="text-[var(--muted)] mb-1">Cons</p>
-              <ul class="list-disc pl-5 space-y-1">${(o.cons||[]).map(p=>`<li>${p}</li>`).join('')}</ul>
-            </div>
-          </div>
-
-          <div class="mt-5 flex gap-2">
-            <a href="${o.url}" target="_blank" rel="nofollow noopener" class="btn flex-1 inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[var(--accent)] text-black hover:brightness-95 shadow-gold font-semibold">Get Deal</a>
-            <a href="#subscribe" class="btn px-4 py-3 rounded-xl border border-[var(--stroke)] hover:bg-white/5">Learn more</a>
-          </div>
+          <ul class="mt-3 text-sm">
+            ${(o.pros||[]).slice(0,2).map(p=>`<li class="pro">${p}</li>`).join('')}
+            ${(o.cons||[]).slice(0,1).map(c=>`<li class="con text-[var(--muted)]">${c}</li>`).join('')}
+          </ul>
+          <a href="${o.url}" target="_blank" rel="nofollow noopener" class="mt-4 btn inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[var(--brand)] text-white hover:bg-[var(--brand-dark)] shadow-brand">Get Deal</a>
         </article>`;
+    }
+
+    function compareRow(o){
+      return `
+        <tr class="border-t">
+          <td class="py-2 pr-4 font-medium">${o.brand}</td>
+          <td class="py-2 pr-4">${o.commission||''}</td>
+          <td class="py-2 pr-4">${o.cookie||''}</td>
+          <td class="py-2 pr-4">${o._cat||o.category}</td>
+          <td class="py-2 pr-4">${o.price_hint||''}</td>
+          <td class="py-2 pr-4"><a href="${o.url}" target="_blank" rel="nofollow noopener" class="underline">Promo link</a></td>
+        </tr>`;
+    }
+
+    function chooseTopPick(list){
+      // Simple heuristic: prioritize business/monetization offers over supplements
+      const priority = ["Audience Growth","Monetization","Business","Performance"];
+      const sorted = [...list].sort((a,b) => (priority.indexOf(a._cat)||9) - (priority.indexOf(b._cat)||9));
+      return sorted[0] || list[0];
     }
 
     function render(){
       const list = filtered();
+
+      // Top pick
+      const top = chooseTopPick(list);
+      elTop.innerHTML = top ? topPickHTML(top) : '';
+
+      // Cards
       elCards.innerHTML = list.map(cardHTML).join('');
+
+      // Compare
+      elCompare.innerHTML = list.map(compareRow).join('');
     }
 
-    elQ?.addEventListener('input', render);
-    elCat?.addEventListener('change', render);
-    elSort?.addEventListener('change', render);
+    elQ.addEventListener('input', render);
+    elCat.addEventListener('change', render);
+    elSort.addEventListener('change', render);
+
     load();
   </script>
 </body>
 </html>
-
