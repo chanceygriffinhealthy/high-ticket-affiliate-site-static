@@ -1,110 +1,237 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>High-Ticket Picks — Best Products That Convert</title>
-  <meta name="description" content="Top high-ticket products chosen for serious entrepreneurs. Learn what each offer does, who it helps, and how it delivers results." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Pick — High-Ticket Products That Actually Help People</title>
+  <meta name="description" content="Expert-vetted, product-first reviews. See our Top Pick, why it works, and two strong alternatives.">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="High-Ticket Picks — Our Top Recommendation">
+  <meta property="og:description" content="Clear benefits, who it’s for, and how it works. Compare quickly, then get the offer.">
+  <meta property="og:url" content="https://high-ticket-affiliate-site-static.vercel.app">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230ea5e9'/%3E%3Cpath d='M7 12h10M12 7v10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- TailwindCSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --brand: #0ea5e9;
-      --brand-dark: #0369a1;
-      --bg: #f9fafb;
-      --text: #111827;
-      --muted: #6b7280;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-    .pro:before {content:"✓ "; color:#16a34a;}
-    .con:before {content:"• "; color:#ef4444;}
-    .btn {transition: all .15s ease;}
-    .btn:hover {transform: translateY(-2px);}
+    :root{--brand:#0ea5e9;--brand2:#0369a1;--ink:#0f172a;--muted:#64748b;--bg:#f8fafc}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+    .btn{transition:transform .12s ease,box-shadow .2s ease}
+    .btn:active{transform:translateY(1px)}
+    .pro:before{content:"✓ ";color:#16a34a}
+    .con:before{content:"• ";color:#ef4444}
+    .card{background:#fff;border:1px solid #e8edf4}
+    .stickybar{position:sticky;bottom:0;background:#0b1220;color:#fff}
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="bg-white shadow-sm sticky top-0 z-40">
+  <!-- NAV -->
+  <header class="bg-white/90 backdrop-blur border-b sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <h1 class="text-xl font-bold text-[var(--brand)]">High-Ticket Picks</h1>
-      <a href="#offers" class="text-sm font-medium text-[var(--brand-dark)] hover:underline">Browse Offers →</a>
+      <div class="font-extrabold tracking-tight text-[color:var(--brand)]">High-Ticket Picks</div>
+      <nav class="hidden sm:flex gap-5 text-sm">
+        <a href="#why" class="hover:underline">Why this pick</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+        <a href="#more" class="hover:underline">Other offers</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="max-w-6xl mx-auto px-4 py-12 text-center">
-    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-      Discover <span class="text-[var(--brand)]">High-Ticket</span> Products That Actually Help People
-    </h2>
-    <p class="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-      Each pick is researched and proven to convert because it solves a real problem. Choose one, share it, and start earning.
-    </p>
-    <div class="mt-6">
-      <a href="#offers" class="btn inline-block px-6 py-3 bg-[var(--brand)] text-white rounded-xl shadow-md font-semibold hover:bg-[var(--brand-dark)]">View Featured Offers</a>
+  <!-- HERO (auto-filled from Top Pick) -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-xs px-2 py-1 rounded-full bg-[color:var(--brand)]/10 text-[color:var(--brand)] border border-[color:var(--brand)]/20">
+          Editor’s Choice
+        </p>
+        <h1 id="tp-title" class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">Our Top Pick</h1>
+        <p id="tp-tagline" class="mt-3 text-lg text-[color:var(--muted)]">We’ll load your top offer’s benefits here.</p>
+
+        <ul id="tp-bullets" class="mt-5 space-y-2 text-sm">
+          <!-- populated from pros[] -->
+        </ul>
+
+        <div class="mt-6 flex gap-3">
+          <a id="tp-cta" href="#" target="_blank" rel="nofollow noopener"
+             class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
+            Get the Offer
+          </a>
+          <a href="#why" class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl border">
+            Why we recommend it
+          </a>
+        </div>
+        <p class="mt-3 text-xs text-[color:var(--muted)]">Clear, product-first copy. No earnings guarantees; results vary with effort.</p>
+      </div>
+      <div>
+        <img id="tp-image" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
+             alt="Top pick" class="rounded-2xl card shadow-sm">
+      </div>
     </div>
   </section>
 
-  <!-- OFFERS -->
-  <section id="offers" class="max-w-6xl mx-auto px-4 pb-12">
-    <h2 class="text-2xl font-bold mb-6 text-center">Editor-Vetted Offers</h2>
-    <div id="cards" class="grid md:grid-cols-3 gap-6"></div>
-  </section>
-
-  <!-- WHY TRUST -->
-  <section class="max-w-6xl mx-auto px-4 pb-16">
-    <div class="bg-white p-6 rounded-2xl shadow-sm border">
-      <h3 class="text-xl font-bold mb-3">Why These Products?</h3>
-      <ul class="space-y-2 text-[var(--muted)]">
-        <li>✔ Selected for quality, credibility, and proven customer results.</li>
-        <li>✔ Every link goes directly to the official vendor page.</li>
-        <li>✔ We focus on products that build trust and long-term value.</li>
-      </ul>
+  <!-- TRUST STRIP -->
+  <section class="max-w-6xl mx-auto px-4 mt-8">
+    <div class="grid sm:grid-cols-3 gap-3 text-sm text-[color:var(--muted)]">
+      <div class="card rounded-xl p-3">✅ Product-first: what it is, who it helps</div>
+      <div class="card rounded-xl p-3">🔒 Direct to official vendor checkout</div>
+      <div class="card rounded-xl p-3">💬 Honest pros & cons (no hype)</div>
     </div>
   </section>
+
+  <!-- WHY THIS PICK -->
+  <section id="why" class="max-w-6xl mx-auto px-4 py-10">
+    <div class="card rounded-2xl p-6">
+      <h2 class="text-xl font-bold">Why we recommend this</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-3 text-sm text-[color:var(--muted)]">
+        <div class="bg-[color:var(--bg)] rounded-xl p-4">
+          <p class="font-medium text-[color:var(--ink)]">Proven format</p>
+          <p>Clear framework with examples so you’re not guessing step-to-step.</p>
+        </div>
+        <div class="bg-[color:var(--bg)] rounded-xl p-4">
+          <p class="font-medium text-[color:var(--ink)]">System, not tips</p>
+          <p>Repeatable process and templates to save hours and avoid mistakes.</p>
+        </div>
+        <div class="bg-[color:var(--bg)] rounded-xl p-4">
+          <p class="font-medium text-[color:var(--ink)]">Great for action-takers</p>
+          <p>Designed to get you publishing, testing, and improving quickly.</p>
+        </div>
+      </div>
+      <div class="mt-5">
+        <a id="tp-cta-2" href="#" target="_blank" rel="nofollow noopener"
+           class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
+          Get the Offer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (generic) -->
+  <section class="max-w-6xl mx-auto px-4 pb-6">
+    <div class="card rounded-2xl p-6">
+      <h2 class="text-xl font-bold">How it works</h2>
+      <ol class="mt-3 grid md:grid-cols-3 gap-4 text-sm text-[color:var(--muted)]">
+        <li class="bg-[color:var(--bg)] rounded-xl p-4"><span class="font-medium text-[color:var(--ink)]">1) Learn the framework</span><br>Follow the step-by-step lessons or guide.</li>
+        <li class="bg-[color:var(--bg)] rounded-xl p-4"><span class="font-medium text-[color:var(--ink)]">2) Apply quickly</span><br>Use included templates and checklists to move fast.</li>
+        <li class="bg-[color:var(--bg)] rounded-xl p-4"><span class="font-medium text-[color:var(--ink)]">3) Iterate to results</span><br>Adjust based on feedback and data; stay consistent.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- OTHER OFFERS -->
+  <section id="more" class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="text-xl font-bold mb-3">Other solid options</h2>
+    <div id="secondary" class="grid md:grid-cols-2 gap-4"></div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="stickybar z-30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <p class="text-sm">Ready to take action? Jump back to our <span class="font-semibold">Top Pick</span>.</p>
+      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+         class="btn inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white text-[color:var(--ink)]">Back to Top</a>
+    </div>
+  </div>
 
   <!-- FOOTER -->
-  <footer class="bg-white border-t">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-[var(--muted)]">
-      <p><strong>Affiliate Disclosure:</strong> Some links on this site are affiliate links. If you click and purchase, we may earn a small commission at no extra cost to you.</p>
-      <p class="mt-2">&copy; 2025 High-Ticket Picks. All Rights Reserved.</p>
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-xs text-[color:var(--muted)]">
+      <p><strong class="text-[color:var(--ink)]">Affiliate disclosure:</strong> Some links are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you.</p>
     </div>
   </footer>
 
   <!-- LOGIC -->
   <script>
+    // Simple brand images (you can replace with your own)
     const brandImgs = {
       "KeySlim Drops": "https://images.unsplash.com/photo-1541427468627-a89a96e5ca37?q=80&w=1200&auto=format&fit=crop",
       "Tube Mastery & Monetization": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
       "eFarming Challenge": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
     };
 
-    async function loadOffers() {
-      const res = await fetch('./offers.json', {cache: 'no-store'});
-      const offers = await res.json();
-      const el = document.getElementById('cards');
-      el.innerHTML = offers.map(o => `
-        <div class="bg-white p-5 rounded-2xl shadow-sm border flex flex-col">
-          <img src="${brandImgs[o.brand] || ''}" alt="" class="rounded-xl mb-3 h-40 object-cover">
-          <h3 class="text-xl font-bold">${o.brand}</h3>
-          <p class="text-sm text-[var(--muted)] mb-2">${o.tagline}</p>
-          <div class="bg-[var(--bg)] p-3 rounded-xl text-sm mb-3">
-            <p><strong>What it is:</strong> ${o.price_hint}</p>
-            <p><strong>Best for:</strong> ${o.best_for}</p>
+    // Re-map categories to fit a digital-entrepreneur narrative
+    const catMap = {
+      "Health & Wellness": "Performance",
+      "Business / YouTube": "Audience Growth",
+      "Business / Online Income": "Monetization"
+    };
+
+    // Heuristic to choose a Top Pick (prioritize business offers)
+    function chooseTopPick(list){
+      const pri = ["Audience Growth","Monetization","Business","Performance"]; // business first
+      const mapped = list.map(o => ({...o, _cat: catMap[o.category] || o.category || "Other"}));
+      mapped.sort((a,b) => (pri.indexOf(a._cat)<0?99:pri.indexOf(a._cat)) - (pri.indexOf(b._cat)<0?99:pri.indexOf(b._cat)));
+      return {top: mapped[0], rest: mapped.slice(1)};
+    }
+
+    async function load() {
+      let offers = [];
+      try {
+        const res = await fetch('./offers.json', {cache:'no-store'});
+        offers = await res.json();
+      } catch (e) {
+        console.warn('offers.json missing or invalid', e);
+      }
+
+      if (!offers.length) {
+        document.getElementById('tp-title').textContent = "Add offers.json to show products";
+        document.getElementById('tp-tagline').textContent = "Create an offers.json file in your repo root. Then refresh.";
+        return;
+      }
+
+      // Pick top + rest
+      const {top, rest} = chooseTopPick(offers);
+
+      // Fill hero from Top Pick
+      document.getElementById('tp-title').textContent = top.brand || 'Top Pick';
+      document.getElementById('tp-tagline').textContent = top.tagline || '';
+      document.getElementById('tp-cta').href = top.url;
+      document.getElementById('tp-cta-2').href = top.url;
+      document.getElementById('tp-image').src = brandImgs[top.brand] || document.getElementById('tp-image').src;
+
+      // Bullets
+      const bullets = (top.pros || []).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('') +
+                      (top.cons && top.cons.length ? `<li class="con text-[color:var(--muted)]">${top.cons[0]}</li>` : '');
+      document.getElementById('tp-bullets').innerHTML = bullets;
+
+      // Render other offers
+      document.getElementById('secondary').innerHTML = rest.map(o => `
+        <article class="card rounded-2xl p-5 flex flex-col">
+          <img src="${brandImgs[o.brand] || ''}" class="rounded-xl mb-3 h-44 object-cover" alt="">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <h3 class="text-lg font-extrabold">${o.brand}</h3>
+              <p class="text-sm text-[color:var(--muted)]">${o.tagline || ''}</p>
+            </div>
+            <span class="text-xs px-2 py-1 rounded-full bg-black/5">${catMap[o.category] || o.category || 'Other'}</span>
           </div>
-          <ul class="text-sm flex-1 mb-3">
-            ${(o.pros || []).map(p => `<li class="pro">${p}</li>`).join('')}
-            ${(o.cons || []).map(c => `<li class="con text-[var(--muted)]">${c}</li>`).join('')}
+          <div class="mt-3 bg-[color:var(--bg)] rounded-xl p-3 text-sm">
+            <div><strong>What it is:</strong> ${o.price_hint || 'Program / product'}</div>
+            <div><strong>Best for:</strong> ${o.best_for || 'Creators & entrepreneurs'}</div>
+          </div>
+          <ul class="text-sm my-3">
+            ${(o.pros || []).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('')}
+            ${(o.cons || []).slice(0,1).map(c=>`<li class="con text-[color:var(--muted)]">${c}</li>`).join('')}
           </ul>
-          <a href="${o.url}" target="_blank" class="btn mt-auto text-center px-4 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold hover:bg-[var(--brand-dark)]">Learn More</a>
-        </div>
+          <a href="${o.url}" target="_blank" rel="nofollow noopener"
+             class="btn mt-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)]">
+            Get the Offer
+          </a>
+        </article>
       `).join('');
     }
-    loadOffers();
-  </script>
+    load();
 
+    // Lightweight outbound click logger (replace with GA later if you want)
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a && a.href) console.log('Outbound click:', a.href);
+    });
+  </script>
 </body>
 </html>
