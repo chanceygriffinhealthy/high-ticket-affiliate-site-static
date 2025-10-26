@@ -3,20 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Top Pick — High-Ticket Products That Actually Help People</title>
-  <meta name="description" content="Expert-vetted, product-first reviews. See our Top Pick, why it works, and two strong alternatives.">
+  <title>High-Ticket Picks — Curated Products That Actually Help People</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="Discover proven high-ticket affiliate offers that convert. Clear product benefits, who it's for, and direct links to official pages.">
+  <meta name="keywords" content="high ticket affiliate marketing, digital income, online business, affiliate products, Tube Mastery, KeySlim Drops, eFarming">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://high-ticket-affiliate-site-static.vercel.app/">
 
   <!-- Social preview -->
   <meta property="og:title" content="High-Ticket Picks — Our Top Recommendation">
-  <meta property="og:description" content="Clear benefits, who it’s for, and how it works. Compare quickly, then get the offer.">
-  <meta property="og:url" content="https://high-ticket-affiliate-site-static.vercel.app">
+  <meta property="og:description" content="Expert-vetted products with clear benefits. See our Top Pick and two strong alternatives.">
+  <meta property="og:url" content="https://high-ticket-affiliate-site-static.vercel.app/">
   <meta property="og:image" content="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"High-Ticket Picks",
+    "url":"https://high-ticket-affiliate-site-static.vercel.app/",
+    "description":"Curated high-ticket affiliate offers that convert. Trusted products, tested funnels, and systems that work.",
+    "publisher":{"@type":"Organization","name":"High-Ticket Picks"}
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230ea5e9'/%3E%3Cpath d='M7 12h10M12 7v10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 
-  <!-- TailwindCSS (CDN) -->
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{--brand:#0ea5e9;--brand2:#0369a1;--ink:#0f172a;--muted:#64748b;--bg:#f8fafc}
@@ -51,16 +68,14 @@
           Editor’s Choice
         </p>
         <h1 id="tp-title" class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">Our Top Pick</h1>
-        <p id="tp-tagline" class="mt-3 text-lg text-[color:var(--muted)]">We’ll load your top offer’s benefits here.</p>
+        <p id="tp-tagline" class="mt-3 text-lg text-[color:var(--muted)]">Loading top offer…</p>
 
-        <ul id="tp-bullets" class="mt-5 space-y-2 text-sm">
-          <!-- populated from pros[] -->
-        </ul>
+        <ul id="tp-bullets" class="mt-5 space-y-2 text-sm"></ul>
 
         <div class="mt-6 flex gap-3">
           <a id="tp-cta" href="#" target="_blank" rel="nofollow noopener"
              class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
-            Get the Offer
+            Get Instant Access
           </a>
           <a href="#why" class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl border">
             Why we recommend it
@@ -69,8 +84,10 @@
         <p class="mt-3 text-xs text-[color:var(--muted)]">Clear, product-first copy. No earnings guarantees; results vary with effort.</p>
       </div>
       <div>
-        <img id="tp-image" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
-             alt="Top pick" class="rounded-2xl card shadow-sm">
+        <img id="tp-image"
+             src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
+             alt="Top pick hero image"
+             class="rounded-2xl card shadow-sm">
       </div>
     </div>
   </section>
@@ -105,13 +122,13 @@
       <div class="mt-5">
         <a id="tp-cta-2" href="#" target="_blank" rel="nofollow noopener"
            class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
-          Get the Offer
+          Get Instant Access
         </a>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS (generic) -->
+  <!-- HOW IT WORKS -->
   <section class="max-w-6xl mx-auto px-4 pb-6">
     <div class="card rounded-2xl p-6">
       <h2 class="text-xl font-bold">How it works</h2>
@@ -145,16 +162,65 @@
     </div>
   </footer>
 
-  <!-- LOGIC -->
+  <!-- DATA + LOGIC (Embedded offers so you don't need offers.json) -->
   <script>
-    // Simple brand images (you can replace with your own)
+    // ===== Embedded product data (edit URLs/taglines if needed) =====
+    const OFFERS = [
+      {
+        id: "keyslim-drops",
+        brand: "KeySlim Drops",
+        category: "Health & Wellness",
+        tagline: "Daily herbal drops that support metabolism, energy, and appetite control",
+        price_hint: "Liquid supplement • 1–3 bottles",
+        best_for: "Busy adults who prefer a simple daily routine",
+        pros: [
+          "Simple to take—no pills",
+          "Includes a 60-day money-back guarantee",
+          "Clear usage guide with bundles"
+        ],
+        cons: ["Not a replacement for diet & activity"],
+        url: "https://getkeyslimdrops.cc/vsl1/#aff=healthychance"
+      },
+      {
+        id: "tube-mastery",
+        brand: "Tube Mastery & Monetization",
+        category: "Business / YouTube",
+        tagline: "Step-by-step course for building faceless YouTube channels that earn income 24/7",
+        price_hint: "On-demand video course • templates included",
+        best_for: "Creators who want YouTube income without showing their face",
+        pros: [
+          "Covers niche selection, scripting, and outsourcing",
+          "Repeatable content system with examples",
+          "Includes active community for feedback"
+        ],
+        cons: ["Requires consistent publishing for results"],
+        url: "https://mattpar.com/tube-mastery-ds#aff=healthychance"
+      },
+      {
+        id: "efarming-challenge",
+        brand: "eFarming Challenge",
+        category: "Business / Online Income",
+        tagline: "Learn how to create a profitable email-based online income system in days",
+        price_hint: "Guided challenge • daily lessons & tasks",
+        best_for: "Beginners who want a clear, step-by-step path",
+        pros: [
+          "Daily checkpoints to build consistency",
+          "Focuses on building your own audience",
+          "Includes email templates and strategy"
+        ],
+        cons: ["Results depend on following the daily tasks"],
+        url: "https://www.digistore24.com/redir/449012/healthychance/"
+      }
+    ];
+
+    // Simple brand images (replace with your own if you like)
     const brandImgs = {
       "KeySlim Drops": "https://images.unsplash.com/photo-1541427468627-a89a96e5ca37?q=80&w=1200&auto=format&fit=crop",
       "Tube Mastery & Monetization": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
       "eFarming Challenge": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
     };
 
-    // Re-map categories to fit a digital-entrepreneur narrative
+    // Category remap for digital-entrepreneur theme
     const catMap = {
       "Health & Wellness": "Performance",
       "Business / YouTube": "Audience Growth",
@@ -163,38 +229,28 @@
 
     // Heuristic to choose a Top Pick (prioritize business offers)
     function chooseTopPick(list){
-      const pri = ["Audience Growth","Monetization","Business","Performance"]; // business first
+      const pri = ["Audience Growth","Monetization","Business","Performance"];
       const mapped = list.map(o => ({...o, _cat: catMap[o.category] || o.category || "Other"}));
       mapped.sort((a,b) => (pri.indexOf(a._cat)<0?99:pri.indexOf(a._cat)) - (pri.indexOf(b._cat)<0?99:pri.indexOf(b._cat)));
       return {top: mapped[0], rest: mapped.slice(1)};
     }
 
-    async function load() {
-      let offers = [];
-      try {
-        const res = await fetch('./offers.json', {cache:'no-store'});
-        offers = await res.json();
-      } catch (e) {
-        console.warn('offers.json missing or invalid', e);
-      }
-
-      if (!offers.length) {
-        document.getElementById('tp-title').textContent = "Add offers.json to show products";
-        document.getElementById('tp-tagline').textContent = "Create an offers.json file in your repo root. Then refresh.";
+    function render() {
+      if (!OFFERS || !OFFERS.length) {
+        document.getElementById('tp-title').textContent = "No offers found";
+        document.getElementById('tp-tagline').textContent = "Please add offer data in the OFFERS array.";
         return;
       }
+      const {top, rest} = chooseTopPick(OFFERS);
 
-      // Pick top + rest
-      const {top, rest} = chooseTopPick(offers);
-
-      // Fill hero from Top Pick
+      // Fill hero
       document.getElementById('tp-title').textContent = top.brand || 'Top Pick';
       document.getElementById('tp-tagline').textContent = top.tagline || '';
       document.getElementById('tp-cta').href = top.url;
       document.getElementById('tp-cta-2').href = top.url;
       document.getElementById('tp-image').src = brandImgs[top.brand] || document.getElementById('tp-image').src;
+      document.getElementById('tp-image').alt = (top.brand || 'Top pick') + " product photo";
 
-      // Bullets
       const bullets = (top.pros || []).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('') +
                       (top.cons && top.cons.length ? `<li class="con text-[color:var(--muted)]">${top.cons[0]}</li>` : '');
       document.getElementById('tp-bullets').innerHTML = bullets;
@@ -202,7 +258,7 @@
       // Render other offers
       document.getElementById('secondary').innerHTML = rest.map(o => `
         <article class="card rounded-2xl p-5 flex flex-col">
-          <img src="${brandImgs[o.brand] || ''}" class="rounded-xl mb-3 h-44 object-cover" alt="">
+          <img src="${brandImgs[o.brand] || ''}" alt="${o.brand} product photo" class="rounded-xl mb-3 h-44 object-cover">
           <div class="flex items-start justify-between gap-2">
             <div>
               <h3 class="text-lg font-extrabold">${o.brand}</h3>
@@ -220,14 +276,15 @@
           </ul>
           <a href="${o.url}" target="_blank" rel="nofollow noopener"
              class="btn mt-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)]">
-            Get the Offer
+            Get Instant Access
           </a>
         </article>
       `).join('');
     }
-    load();
 
-    // Lightweight outbound click logger (replace with GA later if you want)
+    render();
+
+    // Lightweight outbound click logger (console; add GA later if desired)
     document.addEventListener('click', (e) => {
       const a = e.target.closest('a');
       if (a && a.href) console.log('Outbound click:', a.href);
