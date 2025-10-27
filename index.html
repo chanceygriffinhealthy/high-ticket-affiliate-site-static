@@ -3,35 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>High-Ticket Picks — Curated Products That Actually Help People</title>
+  <title>Best High-Ticket Affiliate Offers — Curated Picks That Convert</title>
 
   <!-- Core SEO -->
-  <meta name="description" content="Discover proven high-ticket affiliate offers that convert. Clear product benefits, who it's for, and direct links to official pages.">
-  <meta name="keywords" content="high ticket affiliate marketing, digital income, online business, affiliate products, Tube Mastery, KeySlim Drops, eFarming">
+  <meta name="description" content="Discover the best high-ticket affiliate offers that actually convert. Clear product benefits, who each offer is for, and direct links to official pages.">
+  <meta name="keywords" content="high ticket affiliate marketing,best high ticket affiliate programs,digital income,online business,affiliate products,Tube Mastery,KeySlim Drops,eFarming Challenge,passive income,make money online">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://high-ticket-affiliate-site-static.vercel.app/">
 
   <!-- Social preview -->
-  <meta property="og:title" content="High-Ticket Picks — Our Top Recommendation">
+  <meta property="og:title" content="Best High-Ticket Affiliate Offers — Curated Picks That Convert">
   <meta property="og:description" content="Expert-vetted products with clear benefits. See our Top Pick and two strong alternatives.">
   <meta property="og:url" content="https://high-ticket-affiliate-site-static.vercel.app/">
   <meta property="og:image" content="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Schema.org -->
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230ea5e9'/%3E%3Cpath d='M7 12h10M12 7v10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- JSON-LD: WebSite + ItemList + FAQPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"High-Ticket Picks",
     "url":"https://high-ticket-affiliate-site-static.vercel.app/",
-    "description":"Curated high-ticket affiliate offers that convert. Trusted products, tested funnels, and systems that work.",
-    "publisher":{"@type":"Organization","name":"High-Ticket Picks"}
+    "description":"Curated high-ticket affiliate offers that convert. Product-first reviews with clear benefits and direct official links."
   }
   </script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230ea5e9'/%3E%3Cpath d='M7 12h10M12 7v10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script type="application/ld+json" id="itemlist-schema">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Are these affiliate links?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Some links are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you."}
+      },
+      {
+        "@type":"Question",
+        "name":"How do you choose your Top Pick?",
+        "acceptedAnswer":{"@type":"Answer","text":"We weigh product quality, clarity of benefits, customer experience, and funnel performance. We avoid hype and prefer transparent, reputable vendors."}
+      },
+      {
+        "@type":"Question",
+        "name":"How fast will I see results?",
+        "acceptedAnswer":{"@type":"Answer","text":"Results vary based on the offer and your effort. We recommend picking one offer, following the system consistently, and iterating based on feedback and data."}
+      }
+    ]
+  }
+  </script>
 
   <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -44,36 +73,34 @@
     .con:before{content:"• ";color:#ef4444}
     .card{background:#fff;border:1px solid #e8edf4}
     .stickybar{position:sticky;bottom:0;background:#0b1220;color:#fff}
+    .badge{font-size:11px}
+    a[rel~="sponsored"]{text-decoration:none}
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <header class="bg-white/90 backdrop-blur border-b sticky top-0 z-40">
+  <header class="bg-white/90 backdrop-blur border-b sticky top-0 z-40" role="banner">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="font-extrabold tracking-tight text-[color:var(--brand)]">High-Ticket Picks</div>
-      <nav class="hidden sm:flex gap-5 text-sm">
+      <a href="#top" class="font-extrabold tracking-tight text-[color:var(--brand)]" aria-label="High-Ticket Picks">High-Ticket Picks</a>
+      <nav class="hidden sm:flex gap-5 text-sm" aria-label="Primary">
         <a href="#why" class="hover:underline">Why this pick</a>
-        <a href="#faq" class="hover:underline">FAQ</a>
         <a href="#more" class="hover:underline">Other offers</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO (auto-filled from Top Pick) -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
+  <!-- HERO (Top Pick) -->
+  <main id="top" class="max-w-6xl mx-auto px-4 pt-10" role="main">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <p class="inline-flex items-center gap-2 text-xs px-2 py-1 rounded-full bg-[color:var(--brand)]/10 text-[color:var(--brand)] border border-[color:var(--brand)]/20">
-          Editor’s Choice
-        </p>
+        <span class="badge inline-flex items-center px-2 py-1 rounded-full bg-[color:var(--brand)]/10 text-[color:var(--brand)] border border-[color:var(--brand)]/20">Editor’s Choice</span>
         <h1 id="tp-title" class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">Our Top Pick</h1>
-        <p id="tp-tagline" class="mt-3 text-lg text-[color:var(--muted)]">Loading top offer…</p>
-
+        <p id="tp-tagline" class="mt-3 text-lg text-[color:var(--muted)]">Loading the best high-ticket offer for digital entrepreneurs…</p>
         <ul id="tp-bullets" class="mt-5 space-y-2 text-sm"></ul>
-
         <div class="mt-6 flex gap-3">
-          <a id="tp-cta" href="#" target="_blank" rel="nofollow noopener"
+          <a id="tp-cta" href="#" target="_blank" rel="nofollow sponsored noopener"
              class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
             Get Instant Access
           </a>
@@ -81,23 +108,23 @@
             Why we recommend it
           </a>
         </div>
-        <p class="mt-3 text-xs text-[color:var(--muted)]">Clear, product-first copy. No earnings guarantees; results vary with effort.</p>
+        <p class="mt-3 text-xs text-[color:var(--muted)]">Honest, product-first info. No earnings guarantees; results vary with effort.</p>
       </div>
       <div>
         <img id="tp-image"
              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
-             alt="Top pick hero image"
+             alt="Top pick product preview"
              class="rounded-2xl card shadow-sm">
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- TRUST STRIP -->
-  <section class="max-w-6xl mx-auto px-4 mt-8">
+  <section class="max-w-6xl mx-auto px-4 mt-8" aria-label="Trust highlights">
     <div class="grid sm:grid-cols-3 gap-3 text-sm text-[color:var(--muted)]">
-      <div class="card rounded-xl p-3">✅ Product-first: what it is, who it helps</div>
+      <div class="card rounded-xl p-3">✅ Product-first: what it is & who it helps</div>
       <div class="card rounded-xl p-3">🔒 Direct to official vendor checkout</div>
-      <div class="card rounded-xl p-3">💬 Honest pros & cons (no hype)</div>
+      <div class="card rounded-xl p-3">💬 Real pros & cons (no hype)</div>
     </div>
   </section>
 
@@ -108,7 +135,7 @@
       <div class="grid md:grid-cols-3 gap-4 mt-3 text-sm text-[color:var(--muted)]">
         <div class="bg-[color:var(--bg)] rounded-xl p-4">
           <p class="font-medium text-[color:var(--ink)]">Proven format</p>
-          <p>Clear framework with examples so you’re not guessing step-to-step.</p>
+          <p>Clear framework with examples so you’re not guessing step to step.</p>
         </div>
         <div class="bg-[color:var(--bg)] rounded-xl p-4">
           <p class="font-medium text-[color:var(--ink)]">System, not tips</p>
@@ -116,11 +143,11 @@
         </div>
         <div class="bg-[color:var(--bg)] rounded-xl p-4">
           <p class="font-medium text-[color:var(--ink)]">Great for action-takers</p>
-          <p>Designed to get you publishing, testing, and improving quickly.</p>
+          <p>Designed to get you producing, testing, and improving quickly.</p>
         </div>
       </div>
       <div class="mt-5">
-        <a id="tp-cta-2" href="#" target="_blank" rel="nofollow noopener"
+        <a id="tp-cta-2" href="#" target="_blank" rel="nofollow sponsored noopener"
            class="btn inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)] shadow-md">
           Get Instant Access
         </a>
@@ -146,26 +173,84 @@
     <div id="secondary" class="grid md:grid-cols-2 gap-4"></div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-4 pb-12">
+    <div class="card rounded-2xl p-6">
+      <h2 class="text-xl font-bold">FAQ</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-3 text-sm text-[color:var(--muted)]">
+        <div>
+          <p class="text-[color:var(--ink)] font-medium">Are these affiliate links?</p>
+          <p>Yes — if you purchase via a link here, we may earn a commission at no extra cost to you.</p>
+        </div>
+        <div>
+          <p class="text-[color:var(--ink)] font-medium">How do I choose the right offer?</p>
+          <p>Pick one that matches your strengths and follow its system consistently for 30–60 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STICKY CTA -->
-  <div class="stickybar z-30">
+  <div class="stickybar z-30" role="complementary">
     <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
       <p class="text-sm">Ready to take action? Jump back to our <span class="font-semibold">Top Pick</span>.</p>
-      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
-         class="btn inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white text-[color:var(--ink)]">Back to Top</a>
+      <a href="#top" class="btn inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white text-[color:var(--ink)]">Back to Top</a>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="border-t bg-white">
+  <!-- FOOTER / DISCLOSURE -->
+  <footer class="border-t bg-white" role="contentinfo">
     <div class="max-w-6xl mx-auto px-4 py-8 text-xs text-[color:var(--muted)]">
       <p><strong class="text-[color:var(--ink)]">Affiliate disclosure:</strong> Some links are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you.</p>
     </div>
   </footer>
 
-  <!-- DATA + LOGIC (Embedded offers so you don't need offers.json) -->
+  <!-- NOSCRIPT fallback (helps crawlers & users without JS) -->
+  <noscript>
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <h2>Top Offers (No JavaScript)</h2>
+      <ul>
+        <li><a rel="nofollow sponsored" href="https://mattpar.com/tube-mastery-ds#aff=healthychance">Tube Mastery &amp; Monetization</a></li>
+        <li><a rel="nofollow sponsored" href="https://getkeyslimdrops.cc/vsl1/#aff=healthychance">KeySlim Drops</a></li>
+        <li><a rel="nofollow sponsored" href="https://www.digistore24.com/redir/449012/healthychance/">eFarming Challenge</a></li>
+      </ul>
+    </div>
+  </noscript>
+
+  <!-- DATA + LOGIC (embedded offers; no external file needed) -->
   <script>
     // ===== Embedded product data (edit URLs/taglines if needed) =====
     const OFFERS = [
+      {
+        id: "tube-mastery",
+        brand: "Tube Mastery & Monetization",
+        category: "Business / YouTube",
+        tagline: "Step-by-step course for building faceless YouTube channels that earn income 24/7",
+        price_hint: "On-demand video course • templates included",
+        best_for: "Creators who want YouTube income without showing their face",
+        pros: [
+          "Covers niche selection, scripting, thumbnails & outsourcing",
+          "Repeatable content system with examples",
+          "Community support for feedback and updates"
+        ],
+        cons: ["Requires consistent publishing for results"],
+        url: "https://mattpar.com/tube-mastery-ds#aff=healthychance"
+      },
+      {
+        id: "efarming-challenge",
+        brand: "eFarming Challenge",
+        category: "Business / Online Income",
+        tagline: "Learn how to create a profitable email-based online income system in days",
+        price_hint: "Guided challenge • daily lessons & tasks",
+        best_for: "Beginners who want a clear, step-by-step path",
+        pros: [
+          "Daily checkpoints to build consistency",
+          "Focuses on building your own email audience",
+          "Includes templates and real examples"
+        ],
+        cons: ["Results depend on following the daily tasks"],
+        url: "https://www.digistore24.com/redir/449012/healthychance/"
+      },
       {
         id: "keyslim-drops",
         brand: "KeySlim Drops",
@@ -180,44 +265,14 @@
         ],
         cons: ["Not a replacement for diet & activity"],
         url: "https://getkeyslimdrops.cc/vsl1/#aff=healthychance"
-      },
-      {
-        id: "tube-mastery",
-        brand: "Tube Mastery & Monetization",
-        category: "Business / YouTube",
-        tagline: "Step-by-step course for building faceless YouTube channels that earn income 24/7",
-        price_hint: "On-demand video course • templates included",
-        best_for: "Creators who want YouTube income without showing their face",
-        pros: [
-          "Covers niche selection, scripting, and outsourcing",
-          "Repeatable content system with examples",
-          "Includes active community for feedback"
-        ],
-        cons: ["Requires consistent publishing for results"],
-        url: "https://mattpar.com/tube-mastery-ds#aff=healthychance"
-      },
-      {
-        id: "efarming-challenge",
-        brand: "eFarming Challenge",
-        category: "Business / Online Income",
-        tagline: "Learn how to create a profitable email-based online income system in days",
-        price_hint: "Guided challenge • daily lessons & tasks",
-        best_for: "Beginners who want a clear, step-by-step path",
-        pros: [
-          "Daily checkpoints to build consistency",
-          "Focuses on building your own audience",
-          "Includes email templates and strategy"
-        ],
-        cons: ["Results depend on following the daily tasks"],
-        url: "https://www.digistore24.com/redir/449012/healthychance/"
       }
     ];
 
-    // Simple brand images (replace with your own if you like)
+    // Images (replace if you have branded assets)
     const brandImgs = {
-      "KeySlim Drops": "https://images.unsplash.com/photo-1541427468627-a89a96e5ca37?q=80&w=1200&auto=format&fit=crop",
       "Tube Mastery & Monetization": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
-      "eFarming Challenge": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
+      "eFarming Challenge": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop",
+      "KeySlim Drops": "https://images.unsplash.com/photo-1541427468627-a89a96e5ca37?q=80&w=1200&auto=format&fit=crop"
     };
 
     // Category remap for digital-entrepreneur theme
@@ -227,44 +282,57 @@
       "Business / Online Income": "Monetization"
     };
 
-    // Heuristic to choose a Top Pick (prioritize business offers)
+    // Choose Top Pick (Tube Mastery first by default; otherwise fall back)
     function chooseTopPick(list){
-      const pri = ["Audience Growth","Monetization","Business","Performance"];
+      const pri = ["Audience Growth","Monetization","Business","Performance"]; // business-first
       const mapped = list.map(o => ({...o, _cat: catMap[o.category] || o.category || "Other"}));
       mapped.sort((a,b) => (pri.indexOf(a._cat)<0?99:pri.indexOf(a._cat)) - (pri.indexOf(b._cat)<0?99:pri.indexOf(b._cat)));
       return {top: mapped[0], rest: mapped.slice(1)};
     }
 
-    function render() {
-      if (!OFFERS || !OFFERS.length) {
-        document.getElementById('tp-title').textContent = "No offers found";
-        document.getElementById('tp-tagline').textContent = "Please add offer data in the OFFERS array.";
-        return;
-      }
-      const {top, rest} = chooseTopPick(OFFERS);
+    function updateItemListSchema(offers){
+      try{
+        const node = document.getElementById('itemlist-schema');
+        const data = JSON.parse(node.textContent);
+        data.itemListElement = offers.map((o, i) => ({
+          "@type":"ListItem",
+          "position": i+1,
+          "name": o.brand,
+          "url": "#" + o.id
+        }));
+        node.textContent = JSON.stringify(data);
+      }catch(e){}
+    }
 
-      // Fill hero
-      document.getElementById('tp-title').textContent = top.brand || 'Top Pick';
-      document.getElementById('tp-tagline').textContent = top.tagline || '';
+    function render(){
+      if(!OFFERS || !OFFERS.length) return;
+      const {top, rest} = chooseTopPick(OFFERS);
+      const all = [top, ...rest];
+
+      // Fill hero from Top Pick
+      document.getElementById('tp-title').textContent = top.brand;
+      document.getElementById('tp-tagline').textContent = top.tagline;
       document.getElementById('tp-cta').href = top.url;
       document.getElementById('tp-cta-2').href = top.url;
+      document.getElementById('tp-cta').setAttribute('aria-label', `Open ${top.brand} offer`);
       document.getElementById('tp-image').src = brandImgs[top.brand] || document.getElementById('tp-image').src;
-      document.getElementById('tp-image').alt = (top.brand || 'Top pick') + " product photo";
+      document.getElementById('tp-image').alt = `${top.brand} product preview`;
 
       const bullets = (top.pros || []).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('') +
                       (top.cons && top.cons.length ? `<li class="con text-[color:var(--muted)]">${top.cons[0]}</li>` : '');
       document.getElementById('tp-bullets').innerHTML = bullets;
 
-      // Render other offers
-      document.getElementById('secondary').innerHTML = rest.map(o => `
-        <article class="card rounded-2xl p-5 flex flex-col">
+      // Secondary cards
+      const sec = document.getElementById('secondary');
+      sec.innerHTML = rest.map(o => `
+        <article id="${o.id}" class="card rounded-2xl p-5 flex flex-col">
           <img src="${brandImgs[o.brand] || ''}" alt="${o.brand} product photo" class="rounded-xl mb-3 h-44 object-cover">
           <div class="flex items-start justify-between gap-2">
             <div>
               <h3 class="text-lg font-extrabold">${o.brand}</h3>
               <p class="text-sm text-[color:var(--muted)]">${o.tagline || ''}</p>
             </div>
-            <span class="text-xs px-2 py-1 rounded-full bg-black/5">${catMap[o.category] || o.category || 'Other'}</span>
+            <span class="badge px-2 py-1 rounded-full bg-black/5">${catMap[o.category] || o.category || 'Other'}</span>
           </div>
           <div class="mt-3 bg-[color:var(--bg)] rounded-xl p-3 text-sm">
             <div><strong>What it is:</strong> ${o.price_hint || 'Program / product'}</div>
@@ -274,20 +342,24 @@
             ${(o.pros || []).slice(0,3).map(p=>`<li class="pro">${p}</li>`).join('')}
             ${(o.cons || []).slice(0,1).map(c=>`<li class="con text-[color:var(--muted)]">${c}</li>`).join('')}
           </ul>
-          <a href="${o.url}" target="_blank" rel="nofollow noopener"
-             class="btn mt-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)]">
+          <a href="${o.url}" target="_blank" rel="nofollow sponsored noopener"
+             class="btn mt-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand2)]"
+             aria-label="Open ${o.brand} offer">
             Get Instant Access
           </a>
         </article>
       `).join('');
+
+      // Update ItemList JSON-LD
+      updateItemListSchema(all);
     }
 
     render();
 
-    // Lightweight outbound click logger (console; add GA later if desired)
+    // Lightweight outbound click logger (console; ready for GA later)
     document.addEventListener('click', (e) => {
-      const a = e.target.closest('a');
-      if (a && a.href) console.log('Outbound click:', a.href);
+      const a = e.target.closest('a[href^="http"]');
+      if (a) console.log('Outbound click:', a.href);
     });
   </script>
 </body>
